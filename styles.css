@@ -1,0 +1,158 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav{
+  position: relative;
+  border-radius: .5rem;
+  padding: 5px;
+  margin: 20px auto;
+  width: 90%;
+  min-height: 40px ;
+  position: sticky;
+  background-color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a.brand{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 4px blur #000;
+}
+
+div.menu-bar.active{
+  position: absolute;
+  flex-direction: column;
+  margin: 5px auto;
+  width: 100%;
+  height: fit-content;
+  top: 40px;
+ 
+}
+
+div.menu-bar.active>ul{
+   border-radius: 1rem;
+}
+
+div.menu-bar.active>ul>li{
+  text-align: center;
+  width: 100%;
+  background-color: grey;
+  border-radius: .2rem;
+  padding: 12px;
+}
+
+
+div.active>ul{
+  
+  flex-direction: column;
+  gap: 2px;
+}
+
+ul{
+  display: flex;
+  gap: 20px;
+  height: inherit;
+}
+
+ul>li{
+  list-style-type: none;
+}
+
+ul>li>a{
+  text-decoration: none;
+  color: whitesmoke;
+  transition: 100ms ease-out;
+  width: 100%;
+}
+
+ul>li>a:hover{
+  color: orange;
+  border-bottom: 2px solid  orange;
+}
+
+ul>li:hover{
+    
+}
+
+.menu-buttons{
+  display: none;
+}
+
+div.buttons{
+  display: flex;
+  gap: 1rem;
+}
+
+button{
+  cursor: pointer;
+  padding: 5px;
+  border-style: none;
+  border-radius: .5rem;
+  width: 58px;
+  transition: 300ms ease;
+}
+
+
+
+button:nth-child(2){
+  background-color: darkgray;
+  color: #fff;
+}
+
+button:hover{
+  background-color: orange;
+}
+
+.hamburger{
+  display: none ;
+  cursor: pointer;
+}
+
+.hamburger>span{
+  display: block;
+  margin: 5px 0;
+  width: 20px;
+  height: 2px;
+  border-radius: 1rem;
+  background-color: white;
+}
+
+span.active:nth-child(1){
+  rotate: 45deg;
+  transform: translateY(10px);
+}
+
+span.active:nth-child(2){
+  opacity: 0;
+}
+
+span.active:nth-child(3){
+  rotate: -45deg;
+  transform: translateY(-10px);
+} 
+
+
+@media (max-width:640px) {
+  
+
+  .menu-bar{
+    display: none; 
+  }
+
+  .menu-bar.active{
+    display: block;
+  }
+
+  div.hamburger{
+    display: block;
+    width: 40px;
+    padding: auto;
+  }
+} 
+
