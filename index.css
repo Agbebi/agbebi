@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: clamp(12px, 1vw, 20px);
+}
+
+body{
+    font-family: fredoka;
+    --mainColor: #fff;
+    --secondColor: #002;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+button{
+    font-family: inherit;
+}
+
+nav{
+    width: 100vw;
+    position: fixed;
+    margin-top: 5px;
+    padding: 10px;
+    justify-content: space-around;
+    display: flex;
+    grid-column: 1 / 13;
+    backdrop-filter: blur(50px);
+}
+
+#Home{
+    grid-column: 1 / 13;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    height: 80vh;
+}
+
+#feature{
+    grid-column: 1 / 13;
+    background-color: rgb(226, 236, 240);
+    padding: 50px 10px;
+}
+
+#info{
+    background-color: rgb(248, 251, 253);
+    padding: 10px;
+    grid-column: 1 / 13;
+    display: grid;
+    grid-template-columns: repeat( 12, 1fr);
+}
+
+#info>.interface{
+    grid-column: 7 / 13;
+}
+
+#info>.how{
+    grid-column: 1 / 7;
+}
+
+#article{
+    padding: 50px 10px;
+    grid-column: 1 / 13;
+    height: 70vh;
+    min-height: fit-content;
+}
+
+#call-to-action{
+    padding: 5%;
+    grid-column: 1 / 14;
+    background-color: rgb(226, 236, 240);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+#call-to-action>.download{
+    grid-column: 7 / 13;
+}
+
+footer{
+    background-color: rgb(0, 0, 63);
+    color: var(--mainColor);
+    grid-column: 1 / 13;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.text{
+    width: 100%;
+    margin-left: 5%;
+}
+
+div>h1{
+    font-size: 5rem;
+    width: 50%;
+}
+
+.text>p{
+    width: 40%;
+    line-height: 1.5;
+    color: rgb(68, 68, 68);
+    margin: 30px 0;
+}
+
+.text>button{
+    margin: 0 30px;
+}
+
+.text>a:hover{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.brand{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav>ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    width: 30%;
+    justify-content: space-around;
+}
+
+nav>.hamburger{
+    display: none;
+}
+
+nav>.hamburger>i{
+    font-size: 20px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+ul.active{
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 63);
+    color: var(--mainColor);
+    gap: 5px;
+}
+
+ul.active>li{
+    height: 70px;
+    width: 100%;
+    margin: 5px;
+}
+
+ul.active>li>a{
+    color: var(--mainColor);
+    font-size: 20px;
+}
+
+.menu-items{
+    opacity: 0.8;
+    text-align: center;
+    font-size: 14px;
+}
+
+.menu-items>a:hover{
+    border-bottom: 2px solid darkblue;
+    color: darkblue;
+}
+
+
+a.active{
+    border-bottom: 2px solid darkblue;
+    color: darkblue;
+}
+
+button{
+    padding: 8px 5px;
+    width: 100px;
+    border-radius: 0.7rem;
+    color: aliceblue;
+    background-color: darkblue;
+    border-style: none;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 139, 0.589);
+}
+
+a{
+    text-decoration: none;
+    color: var(--secondColor);
+}
+
+/* Features Section */
+
+
+h3,h2{
+    text-align: center;
+}
+
+h3{
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(58, 58, 99, 0.527);
+}
+
+h2{
+    font-weight: 500;
+    font-size: 25px;
+    margin: 10px 0 40px;
+}
+
+
+h4{
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card-container{
+    display: flex;
+    margin: 20px;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cards, .cards>p{
+    text-align: center;
+}
+
+.cards{
+    border-radius: 1rem;
+    padding: 10px;
+    width: 20%;
+    height: 200px;
+    background-color: var(--mainColor);
+}
+
+.cards>p, .download>p{
+    color: rgb(74, 74, 75);
+}
+
+.interface{
+    padding: 50px 10px;
+    padding-right: 25%;
+}
+
+.interface>h3, .interface>h2, .interface>p{
+    text-align: left;
+}
+
+.interface>h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.interface>p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+
+.how>h3, .how>h2, .how>p{
+    text-align: left;
+}
+
+.how>h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.how>p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    opacity: 0.7;
+}
+
+.how{
+    padding: 50px 60px;
+}
+
+.article-container{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.article{
+    min-width: 150px;
+    width: 25%;
+    height: 30vh;
+    padding: 20px;
+}
+
+.article>img{
+    width: 100%;
+    border-radius: 1rem;
+    margin: 10px 0;
+}
+.article>h3, .article>h4{
+    text-align: left;
+    margin: 5px 0;
+}
+
+.article>p{
+    margin: 20px 0;
+    opacity: 0.5;
+}
+
+.article>h3{
+    font-size: 13px;
+}
+
+.download{
+    padding: 10px;
+    margin-right: 20%;
+}
+.download>h3, .download>h2, .download>p{
+    text-align: left;
+}
+
+.download>p{
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.action-buttons>button{
+    background-color: #002;
+    color: var(--mainColor);
+    padding: 5px;
+    width: 150px;
+}
+.action-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.action-buttons>button:hover{
+    background-color: #000022af;
+}
+
+.action-buttons>button>h3{
+    color: var(--mainColor);
+    margin: 0;
+    font-size: 12px;
+}
+
+.action-buttons>button>h2{
+    margin: 0;
+    font-size: 16px;
+}
+
+.action{
+    height: 50px;
+}
+
+footer>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 20%;
+    height: 70%;
+    text-align: center;
+}
+
+footer>div>h2{
+    opacity: 0.9;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0;
+}
+
+.footer-icons>i{
+    opacity: 0.9;
+    margin: 0 5px;
+    font-size: 20px;
+}
+
+footer>div>a, footer>div>p{
+    color: rgba(255, 255, 255, 0.541);
+}
+footer>div>a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width:821px) and (max-height:700px) {
+    #Home, #feature, #info, #article, #call-to-action{
+        padding: 20px;
+        height: fit-content;
+    }
+   .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   }
+
+   .text>h1{
+    text-align: center;
+    width: 80%;
+   }
+   .text>button{
+    padding-bottom: 10px;
+   }
+
+   #article{
+    min-height: 45vh;
+   }
+
+   
+}
+
+@media (max-width:431px){
+
+    nav>.hamburger{
+        display: flex;
+    }
+    nav>ul{
+        display: none;
+    }
+
+    nav>ul.active{
+        display: flex;
+    }
+    .cards{
+        width:40%;
+    }
+    
+    #info>.interface {
+    grid-column: 1 / 13;
+    text-align: center;
+    padding: 5px;
+    }
+
+    .interface>h3, .interface>h2, .interface>p{
+    text-align: center;
+    }
+
+    #info>.how {
+    grid-column: 1 / 13;
+    text-align: center;
+    padding: 5px;
+    margin: 40px 0;
+    }
+
+    .how>h3, .how>h2, .how>p{
+    text-align: center;
+    }
+
+    .article-container{
+        align-items: center;
+    }
+
+    .article{
+        width: 40%;
+    }
+
+    #call-to-action>.download {
+    grid-column: 1 / 13;
+    margin: auto;
+}
+
+.action-buttons{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.download>h3, .download>h2, .download>p {
+    text-align: center;
+}
+
+footer{
+    flex-wrap: wrap;
+    height: fit-content;
+    align-items: flex-start;
+}
+
+footer>div{
+    width: 50%;
+    padding: 10px;
+}
+}
